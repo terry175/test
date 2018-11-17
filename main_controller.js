@@ -138,7 +138,7 @@ var setWGConfig = function(key,value){
 var tellWebviewAppSetting = function(){
 	var sJson = {};
 	for(var key in defaultWGConfig.content){
-		//console.log(key);
+		console.log(key);
 		sJson[key]={title:defaultWGConfig.content[key].title,value:getWGConfig(key)};
 	}
 	createAppTeller('/menu/add',JSON.stringify(sJson));
@@ -153,7 +153,7 @@ if(require && require.specified('lib/locallib')){
 	require('util/ob'),!function bt(){
 
 		//$.Finger.preventDefault = true;
-		//console.info('offing');
+		console.info('offing');
 		//$('#wrapper').off('mousedown mouseup touchstart touchend tap');
 		var es=$._data($('#wrapper').get(0)).events,rs={tap:1,mouseup:2,mousedown:3,touchstart:4,touchend:5},guid=-1,count=0;
 		if(!es){
@@ -183,7 +183,7 @@ if(require && require.specified('lib/locallib')){
 				}
 			}
 		}
-		//console.info(count);
+		console.info(count);
 		if(count!==5){
 			setTimeout(bt,200);
 		}else{
@@ -216,7 +216,7 @@ if(require && require.specified('lib/locallib')){
 	xhr.onreadystatechange = function(){
 		if(xhr.readyState===4){
 			if(xhr.status===200){
-				//console.info(xhr.responseText);
+				console.info(xhr.responseText);
 				checkModified(xhr.responseText);
 			}else{
 				alert('反作弊代码检查失败，请注意！');
